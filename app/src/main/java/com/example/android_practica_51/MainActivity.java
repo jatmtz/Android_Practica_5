@@ -18,6 +18,21 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void Mapa(View view){
+        Intent i = new Intent(Intent.ACTION_VIEW,Uri.parse(("geo.25.543515, -103.339433")));
+        startActivity(i);
+    }
+
+    public void Camara(View view){
+        Intent i = new Intent("android.media.action.IMAGE_CAPTURE");
+        startActivity(i);
+    }
+
+    public void MarcarTelefono(View view){
+        Intent i = new Intent(Intent.ACTION_DIAL,Uri.parse("tel:8713077441"));
+        startActivity(i);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,14 +84,10 @@ public class MainActivity extends AppCompatActivity {
    });
 
 
-
-
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 BuscarWeb("Batman");
-
-
             }
 
             public void BuscarWeb(String query){
@@ -86,13 +97,26 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent1);
                 }
             }
-
         });
 
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Navegador(View view);
+            public void onClick(View v) {
+                Navegador(v);
+            }
+        });
+
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Mapa(v);
+            }
+        });
+
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Camara(v);
             }
         });
 
