@@ -19,7 +19,7 @@ public class Principal extends AppCompatActivity {
     }
 
     public void Mapa(View view){
-        Intent i = new Intent(Intent.ACTION_VIEW,Uri.parse(("geo.25.543515, -103.339433")));
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:25.543515,-103.339433"));
         startActivity(i);
     }
 
@@ -37,7 +37,7 @@ public class Principal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.principal);
 
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);

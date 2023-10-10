@@ -20,12 +20,13 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long milliUntilFinish) {
                 mTextField.setText("" + milliUntilFinish /1000);
             }
-
             @Override
             public void onFinish() {
                 Intent i = new Intent(getApplicationContext(), Principal.class);
+                startActivity(i);
 
             }
+
         };
 
         CDT.start();
