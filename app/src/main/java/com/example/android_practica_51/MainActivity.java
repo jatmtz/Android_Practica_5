@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.os.CountDownTimer;
 
+
 public class MainActivity extends AppCompatActivity {
     TextView mTextField;
     @Override
@@ -22,10 +23,14 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onFinish() {
-                Intent i = new Intent(getApplicationContext(), Principal.class);
-                startActivity(i);
-
+                try {
+                    Intent i = new Intent(getApplicationContext(), Principal.class);
+                    startActivity(i);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
+
 
         };
 

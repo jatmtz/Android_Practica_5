@@ -8,8 +8,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.example.android_practica_51.MainActivity;
 
-public class Principal extends AppCompatActivity {
+public class Principal extends MainActivity {
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8;
     private Intent intent;
 
