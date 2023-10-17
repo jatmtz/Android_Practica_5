@@ -16,25 +16,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mTextField = (TextView) findViewById(R.id.mTextField);
 
-        CountDownTimer CDT = new CountDownTimer(5000,1000) {
+        CountDownTimer CountDownTimer = new CountDownTimer(5000,1000) {
             @Override
             public void onTick(long milliUntilFinish) {
                 mTextField.setText("" + milliUntilFinish /1000);
             }
             @Override
             public void onFinish() {
-                try {
-                    Intent i = new Intent(getApplicationContext(), Principal.class);
+
+                    Intent i = new Intent(MainActivity.this, Principal.class);
                     startActivity(i);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                    finish();
+
             }
 
+        }.start();
 
-        };
 
-        CDT.start();
 
     }
 
